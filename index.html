@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра на развитие делового этикета</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <button id="startButton" onclick="startGame()">Начать игру</button>
+        <div id="gameIntro" style="display: none;">
+            <h1>Добро пожаловать в игру на развитие делового этикета!</h1>
+            <img src="https://preview.free3d.com/img/2015/06/2408180190015391696/h56gdyvh.jpg" alt="Фото персонажа Кевина">
+            <p>Встречайте нашего персонажа, Кевина. Кевин очень талантлив в своей работе, но у него серьезные проблемы с деловым этикетом. Давайте поможем ему стать настоящим профессионалом!</p>
+            <button onclick="startTask()">Приступить к игре</button>
+        </div>
+        <div id="gameContent" style="display: none;">
+            <div class="question" id="question1">
+                <h2>Вопрос 1: Каково правильное расстояние для стояния при общении с собеседником?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="a"> a) 30-60 см.</li>
+                    <li><input type="radio" name="q1" value="b"> b) 1-2 метра.</li>
+                    <li><input type="radio" name="q1" value="c"> c) Не имеет значения, если собеседник вас хорошо знает.</li>
+                </ul>
+            </div>
+            <div class="question" id="question2">
+                <h2>Вопрос 2: Как вы поздравите коллегу с днем рождения в офисной среде?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="a"> a) Отправлю электронное поздравление.</li>
+                    <li><input type="radio" name="q2" value="b"> b) Позвоню или лично поздравлю.</li>
+                    <li><input type="radio" name="q2" value="c"> c) Проигнорирую, чтобы не нарушить рабочий процесс.</li>
+                </ul>
+            </div>
+            <div class="question" id="question3">
+                <h2>Вопрос 3: Что вы сделаете, если опаздываете на встречу с клиентом?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="a"> a) Не буду ничего предпринимать, ведь опоздания бывают у всех.</li>
+                    <li><input type="radio" name="q3" value="b"> b) Проигнорирую опоздание, важно лишь, что я пришел.</li>
+                    <li><input type="radio" name="q3" value="c"> c) Позвоню и извинюсь, дав информацию о времени прибытия.</li>
+                </ul>
+            </div>
+            <div class="question" id="question4">
+                <h2>Вопрос 4: Каковы основные правила оформления электронных писем в деловой переписке?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q4" value="a"> a) Писать короткие, четкие сообщения с уважительным тоном.</li>
+                    <li><input type="radio" name="q4" value="b"> b) Использовать капслок для выделения важных моментов.</li>
+                    <li><input type="radio" name="q4" value="c"> c) Включить в письмо много эмодзи для улучшения настроения получателя.</li>
+                </ul>
+            </div>
+            <div class="question" id="question5">
+                <h2>Вопрос 5: Как вести себя за столом во время делового обеда или ужина?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q5" value="a"> a) Переговариваться с коллегами громко, чтобы быть услышанным.</li>
+                    <li><input type="radio" name="q5" value="b"> b) Использовать столовые приборы правильно, начиная с наружного.</li>
+                    <li><input type="radio" name="q5" value="c"> c) Не обращать внимание на приборы, ведь мы же на работе.</li>
+                </ul>
+            </div>
+            <div class="question" id="question6">
+                <h2>Вопрос 6: Что вы будете делать, если на встрече начнут обсуждаться темы, с которыми вы не согласны?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q6" value="a"> a) Вежливо выскажу свое мнение, уважая точку зрения других.</li>
+                    <li><input type="radio" name="q6" value="b"> b) Подниму голос, чтобы донести свою точку зрения.</li>
+                    <li><input type="radio" name="q6" value="c"> c) Проигнорирую обсуждение, не стоит вступать в конфликт.</li>
+                </ul>
+            </div>
+            <div class="question" id="question7">
+                <h2>Вопрос 7: Как реагировать на критику со стороны коллеги или начальства?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q7" value="a"> a) Обидеться и замкнуться на общении.</li>
+                    <li><input type="radio" name="q7" value="b"> b) Перебить и начать оправдываться.</li>
+                    <li><input type="radio" name="q7" value="c"> c) Выслушать критику, задать уточняющие вопросы, понять, что можно улучшить.Перебить и начать оправдываться.</li>
+                </ul>
+            </div>
+            <div class="question" id="question8">
+                <h2>Вопрос 8: Каковы шаги, которые нужно предпринять, если вы сделали ошибку на работе?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q8" value="a"> a) Скрыть ошибку и надеяться, что никто не заметит.</li>
+                    <li><input type="radio" name="q8" value="b"> b) Признать ошибку, извиниться и предложить пути ее исправления.</li>
+                    <li><input type="radio" name="q8" value="c"> c) Обвинить в ошибке кого-то другого.</li>
+                </ul>
+            </div>
+            <div class="question" id="question9">
+                <h2>Вопрос 9: Как правильно представить друг друга людям в деловой среде?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q9" value="a"> a) Указать только имена.</li>
+                    <li><input type="radio" name="q9" value="b"> b) Представить себя и забыть о другом человеке.</li>
+                    <li><input type="radio" name="q9" value="c"> c) Указать имена, должности и компанию, в которой работаете.</li>
+                </ul>
+            </div>
+            <div class="question" id="question10">
+                <h2>Вопрос 10: Какие вещи следует избегать во время бизнес-переговоров?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q10" value="a"> a) Проявлять упрямство и несговорчивость.</li>
+                    <li><input type="radio" name="q10" value="b"> b) Стремиться к взаимопониманию и поиску общих решений.</li>
+                    <li><input type="radio" name="q10" value="c"> c) Использовать угрозы и давление. </li>
+                </ul>
+            </div>
+            
+            <button onclick="finishTask()">Закончить игру</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Игра на развитие делового этикета</p>
+        <p>Авторы: Маркулан Макустов, Совет Ернат</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

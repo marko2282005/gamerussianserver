@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('https://bogatyr.club/uploads/posts/2023-01/1674742338_bogatyr-club-p-fon-dlya-saita-besshovnii-fon-krasivo-1.jpg');
+    background-size: cover; /* чтобы изображение занимало всю доступную область */
+    background-repeat: no-repeat; /* чтобы изображение не повторялось */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question h2 {
+    margin-bottom: 10px;
+}
+
+.options {
+    text-align: left;
+}
+
+#gameIntro, #gameContent {
+    margin-top: 20px;
+}
+
+#gameIntro p {
+    margin-bottom: 20px;
+}
+
+#gameIntro img {
+    width: 200px; /* Установите ширину по вашему выбору */
+    border-radius: 50%; /* Для круглой формы */
+    /* Другие стили по вашему выбору */
+}
+
+#startButton {
+    display: block;
+    margin: 0 auto;
+}
+
+#gameContent button {
+    display: block;
+    margin: 20px auto;
+}
+
+#result {
+    display: none;
+}
+
+#result h1 {
+    color: #007bff;
+}
+
+#prizeImg {
+    margin: 20px auto;
+    max-width: 150px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh;
+    margin: 0;
+}
+
+.container {
+    flex: 0;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Цвет фона вашего footer */
+    color: #333; /* Цвет текста в footer */
+    padding: 10px;
+    text-align: center;
+}
+.container {
+    padding-bottom: 60px; /* Вы можете настроить этот отступ по вашему усмотрению */
+}
+
+
+

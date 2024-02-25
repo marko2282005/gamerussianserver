@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Поздравляем!</h1>
+        <p>Вы завершили игру на развитие делового этикета.</p>
+        <p>Количество правильных ответов: <strong id="score"></strong></p>
+        <div id="prizeImg"></div>
+        <p> <span id="prize"></span></p>
+        <button id="playAgainButton" onclick="playAgain()">Сыграть заново</button>
+    </div>
+
+    <audio id="resultSound" src="result.mp3" autoplay></audio>
+    
+    <script>
+        var score = localStorage.getItem('score');
+        document.getElementById('score').innerText = score;
+
+        var prize = '';
+        if (score === 10) {
+    prize = 'Отличный результат! Вы настоящий эксперт по деловому этикету!';
+} else if (score >= 6 && score <= 9) {
+    prize = 'Хороший результат, но можно лучше! Продолжайте обучаться.';
+} else if (score >= 3 && score <= 5) {
+    prize = 'Неплохо! У вас есть базовые знания по деловому этикету.';
+} else if (score <= 2) {
+    prize = 'Требуется больше практики. Не отчаивайтесь, и у вас все получится!';
+}
+        document.getElementById('prize').innerText = prize;
+
+        function playAgain() {
+            localStorage.removeItem('score');
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
